@@ -29,8 +29,7 @@ const BlogIndex = ({ data, location }) => {
       {/* <Bio /> */}
       <div className="container">
         <section className="hero">
-          <div className="hero__heading--bold">Hello<span className="hero__heading--bold-dot">.</span></div>
-          <h1 className="hero__heading">My name is Konstantinos.</h1>
+          <h1 className="hero__heading--bold">Hello<span className="hero__heading--bold-dot">.</span></h1>
           <h2 className="hero__heading-secondary">I'm a frontend developer in Greece.   I love crafting websites and help businesses stand on a digital presence.
             This is my public notebook  — a glimpse of my thoughts on a random order.</h2>
         </section>

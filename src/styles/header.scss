@@ -15,16 +15,16 @@
         justify-content: space-between;
     }
     .logo{
-        font-size: $t-big;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight:300;
         color: $color-text;
         text-decoration: none;
     }
     &__link{
         color: $color-text;
         text-decoration: none;
-        font-weight: 400;
-        font-size: t-par;
+        font-size: 18px;
+        font-weight:300;
     }
 }
 

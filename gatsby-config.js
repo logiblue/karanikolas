@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Knowledge is power`,
+    title: `Karanikolas Konstantinos`,
     author: {
       name: `Karanikolas Konstantinos`,
       summary: `who lives and works in Greece building websites.`,
