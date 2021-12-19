@@ -8,6 +8,11 @@ As years goes by the projects I get to work on are getting more & more demanding
 
 There are many different ways on how to start a new project. For example if you're working on a WordPress website depending on your skillset and workflow you can use from a bare custom theme that follows all the specification that WP requires or use  something pre-made like bedrock or understrap. In my case I decided to build a simple  webpack boilerplate where can be extended or intergrated inside a cms like WordPress or Prismic etc....
 
+
+```toc
+# This code block gets replaced with the TOC
+```
+
 ### NO USE of Frameworks
 Someone could possibly say that this is a dumb approach and you're trying to reinvent the wheel. Well, I could agree but there is an aspect we need to consider. 
 

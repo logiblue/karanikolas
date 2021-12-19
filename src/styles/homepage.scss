@@ -1,0 +1,103 @@
+
+/*=============================================
+=            Hero            =
+=============================================*/
+
+.hero{
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    &__heading{
+        font-size: 30px;
+        margin-top:35px;
+        line-height: 60px;
+        color:$color-text;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &__heading-secondary{
+        font-size: 20px;
+        color: $color-text;
+        line-height: 30px;
+        font-weight:100;
+        max-width: 500px;
+    }
+    &__heading--bold{
+        font-size: 180px;
+        line-height: 70px;
+        margin-bottom: 0px;
+        font-weight: 600;
+        &-dot{
+            font-size: 200px !important;
+            line-height: 0;
+        }
+    }
+
+    border-bottom: 1px solid #4E4E4E;
+}
+
+/*=====  End of Hero  ======*/
+
+
+
+/*=============================================
+=            Home Blog Posts            =
+=============================================*/
+
+
+
+
+
+.home__blog{
+    &--list{
+        padding: 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &--single{
+        border: 1px solid #4E4E4E;
+        margin-bottom: 40px;
+        width: 31.5%;
+        transition: all .4s;
+       
+        &:hover{
+            background-color:#4E4E4E;
+            transition: all .3s;
+            color: #000;
+            border-bottom: 1px solid #4E4E4E;
+
+        }
+       
+    }
+    &--title{
+        font-size: 33px;
+        line-height: 33px;
+        padding-bottom: 20px;
+        font-weight: 600;
+    }
+    &--link{
+        color: #000 ;
+        text-decoration: none !important;
+        &:hover{
+            color: #000;
+        }
+    }
+    &--listitem{
+        padding: 30px;
+    }
+ 
+    &--exc{
+        font-weight: 400;
+    }
+    &--date{
+        font-weight: 400;
+    }
+}
+
+/*=====  End of Home Blog Posts  ======*/

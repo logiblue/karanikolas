@@ -8,22 +8,40 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      // <h1 className="main-heading">
+      //   <Link to="/">{title}</Link>
+      // </h1>
+      <Link className="logo" to="/">
+        {title}
+      </Link>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
+      <Link className="logo" to="/">
         {title}
       </Link>
     )
   }
 
+
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
+
+    <div data-is-root-path={isRootPath}>
+      <header className="header mrb-2">
+        <div className="header-container container pdb-2 pdt-2 mrb-4">
+          <div className="header-container__left">
+            {header}
+          </div>
+          <div className="header-container__right">
+            <Link className="header-container__link" to="/">Home</Link>
+            <Link className="header-container__link" to="/blog">Blog</Link>
+            <Link className="header-container__link" to="/contact">Contact</Link>
+          </div>
+        </div>
+        <div className="site-separator"></div>
+
+      </header>
+      <main className="global-wrapper">{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}

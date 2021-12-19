@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Learning to craft`,
+    title: `Knowledge is power`,
     author: {
       name: `Karanikolas Konstantinos`,
       summary: `who lives and works in Greece building websites.`,
@@ -12,6 +12,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,6 +38,18 @@ module.exports = {
               maxWidth: 630,
             },
           },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+              className: "table-of-contents"
+            },
+          },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
