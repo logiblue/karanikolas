@@ -42,19 +42,20 @@ const BlogIndex = ({ data, location }) => {
             return (
               <li className="home__blog--single" key={post.fields.slug}>
                 <Link className="home__blog--link" to={post.fields.slug} itemProp="url">
+                  <small className="home__blog--date">{post.frontmatter.date}</small>
+                  <div className="site-separator"></div>
+
                   <article
-                    className="home__blog--listitem"
                     itemScope
                     itemType="http://schema.org/Article"
                   >
-                    <header>
-                      <small className="home__blog--date">{post.frontmatter.date}</small>
 
-                      <h2 className="home__blog--title">
-                        <span itemProp="headline">{title}</span>
+                    <h2 className="home__blog--title">
+                      {title}
+                    </h2>
 
-                      </h2>
-                    </header>
+
+                    {/* 
                     <section className="home__blog-exc">
                       <p
                         dangerouslySetInnerHTML={{
@@ -62,7 +63,7 @@ const BlogIndex = ({ data, location }) => {
                         }}
                         itemProp="description"
                       />
-                    </section>
+                    </section> */}
                   </article>
                 </Link>
               </li>
@@ -83,7 +84,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit:6 sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
         fields {
