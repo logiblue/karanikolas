@@ -1,0 +1,21 @@
+
+
+.post-list-item {
+    border-bottom: 1px solid #000;
+    padding: 30px 0;
+
+    &-container{
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+    }
+    &-date{
+        width: 10%;
+        color: #000;
+     }
+    &-title{
+        width: 90%;
+        color: #000;
+        font-size: 20px;
+    }
+}

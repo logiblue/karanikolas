@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="Latest Posts" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Latest Posts" />
       {/* <Bio /> */}
       <div className="container">
         <section className="hero">
@@ -35,6 +35,8 @@ const BlogIndex = ({ data, location }) => {
         </section>
       </div>
       <div className="container home__blog">
+        <Seo title="Latest Posts" />
+        <h2 className="home__blog--section-title">Latest Additions</h2>
         <ol className="home__blog--list" style={{ listStyle: `none` }}>
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug

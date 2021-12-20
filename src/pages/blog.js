@@ -25,10 +25,11 @@ const BlogPage = ({ data, location }) => {
     }
 
     return (
-        <Layout className="blog-page" location={location} title={siteTitle}>
+        <Layout className="blog-page-layout" location={location} title={siteTitle}>
             <Seo title="All posts" />
             <div className="blog-page">
                 <div className="container">
+                    <h1 className="blog-page-title">All Articles</h1>
                     {posts.map(post => {
                         const title = post.frontmatter.title || post.fields.slug
 
@@ -42,16 +43,16 @@ const BlogPage = ({ data, location }) => {
 
 
                                     <Link className="post-list-item-container" to={post.fields.slug} itemProp="url">
-                                        <span className="post-list-item-title" itemProp="headline">{title}</span>
+                                        <h2 className="post-list-item-title" itemProp="headline">{title}</h2>
                                         <small className="post-list-item-date">{post.frontmatter.date}</small>
 
                                         <div className="post-list-item-excerpt">
-                                            <p className="post-list-item-excerpt-p"
+                                            {/* <p className="post-list-item-excerpt-p"
                                                 dangerouslySetInnerHTML={{
                                                     __html: post.frontmatter.description || post.excerpt,
                                                 }}
                                                 itemProp="description"
-                                            />
+                                            /> */}
                                         </div>
                                     </Link>
 
