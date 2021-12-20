@@ -2,6 +2,7 @@
 title: Creating a webpack boilerplate
 date: "2021-11-27T22:40:32.169Z"
 description: The starting point for the a website
+tags: ["Gatsby", "JavaScript", "GraphQL"]
 ---
 ##  When to create a boileplate
 As years goes by the projects I get to work on are getting more & more demanding. Also all of this projects might not be identical but for sure they have something in common. After some research I decided to organize a starter where I could bundle all of the important parts I need for each starting.

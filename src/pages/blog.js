@@ -1,20 +1,28 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-
+import TagDecorator from "../components/tagDeco"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+
+
 const BlogPage = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata?.title || `Title`
     const posts = data.allMarkdownRemark.nodes
-
+    const tags = data.allMarkdownRemark.nodes
+    let taglist;
     if (posts.length === 0) {
         return (
             <Layout location={location} title={siteTitle}>
                 <Seo title="All posts" />
+                {tags.length > 0 &&
+                    <h1>
+                        <strong>+++++++++++{taglist}</strong>
+                    </h1>
+                }
                 <p>
                     No blog posts found. Add markdown posts to "content/blog" (or the
                     directory you specified for the "gatsby-source-filesystem" plugin in
@@ -32,6 +40,12 @@ const BlogPage = ({ data, location }) => {
                     <h1 className="blog-page-title">All Articles</h1>
                     {posts.map(post => {
                         const title = post.frontmatter.title || post.fields.slug
+                        const tags = post.frontmatter.tags || [];
+                        let taglist = 'Tags: ';
+
+                        if (tags.length > 0) {
+                            taglist += tags.join(', ');
+                        }
 
                         return (
                             <div key={post.fields.slug}>
@@ -53,6 +67,22 @@ const BlogPage = ({ data, location }) => {
                                                 }}
                                                 itemProp="description"
                                             /> */}
+                                            {tags.length > 0 &&
+                                                <div>
+                                                    <strong>{taglist}</strong>
+                                                </div>
+                                            }
+                                            {tags.length &&
+                                                <div style={{ fontWeight: 'bold' }}>
+                                                    <p>Tags: {tags.map((tag, i, arr) => (<>
+                                                        <TagDecorator tag={tag} />
+                                                        <span>
+                                                            {arr.length === i + 1 ? `` : `, `}
+                                                        </span>
+                                                    </>))} </p>
+                                                </div>
+                                            }
+
                                         </div>
                                     </Link>
 
@@ -87,6 +117,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
         }
       }
     }

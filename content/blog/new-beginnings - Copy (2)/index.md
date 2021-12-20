@@ -2,6 +2,7 @@
 title: It beggins
 date: "2021-11-25T22:40:32.169Z"
 description: Konstantinos Karanikolas - It beggins.
+tags: ["Gatsby", "JavaScript", "GraphQL"]
 ---
 And we are ON.
 

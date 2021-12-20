@@ -2,6 +2,7 @@
 title: The important JS parts I need to understand before starting(WIP)
 date: "2021-11-25T22:40:32.169Z"
 description: Revisit parts that you don't understand.
+tags: ["Gatsby", "JavaScript", "GraphQL"]
 ---
 Learning or even worse RE-learning on public is kind of shameful. But I earn my development money through a whole different stack and totally different direction. That said, after just a quick look at JS documentation I found that parts that I'm not sure I totally understood and it's a must to know about.
 

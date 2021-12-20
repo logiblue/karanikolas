@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
+import TagDecorator from "../components/tagDeco"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const tags = data.markdownRemark
   const { previous, next } = data
 
   return (
@@ -25,6 +26,16 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
+        {tags.length &&
+          <div style={{ fontWeight: 'bold' }}>
+            <p>Tags: {tags.map((tag, i, arr) => (<>
+              <TagDecorator tag={tag} />
+              <span>
+                {arr.length === i + 1 ? `` : `, `}
+              </span>
+            </>))} </p>
+          </div>
+        }
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -85,6 +96,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
