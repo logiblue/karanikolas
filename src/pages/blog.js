@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import TagDecorator from "../components/tagDeco"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -67,12 +66,12 @@ const BlogPage = ({ data, location }) => {
                                                 }}
                                                 itemProp="description"
                                             /> */}
-                                            {tags.length > 0 &&
+                                            {/* {tags.length > 0 &&
                                                 <div>
                                                     <strong>{taglist}</strong>
                                                 </div>
-                                            }
-                                            {tags.length &&
+                                            } */}
+                                            {/* {tags.length &&
                                                 <div style={{ fontWeight: 'bold' }}>
                                                     <p>Tags: {tags.map((tag, i, arr) => (<>
                                                         <TagDecorator tag={tag} />
@@ -81,7 +80,7 @@ const BlogPage = ({ data, location }) => {
                                                         </span>
                                                     </>))} </p>
                                                 </div>
-                                            }
+                                            } */}
 
                                         </div>
                                     </Link>

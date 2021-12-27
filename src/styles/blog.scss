@@ -19,3 +19,31 @@
         font-size: 20px;
     }
 }
+
+
+
+.blog-post{
+    &__title{
+        border-bottom: 1px solid #000;;
+        font-size: 50px;
+        line-height: 62px;
+        margin: 0;
+        padding: 70px 0px;
+        margin-bottom: 40px;
+    }
+    &__articleBody{
+        max-width: 850px !important;
+    
+    }
+    & p{
+        font-size: 19px;;
+    }
+    & h2{
+        margin-top: 40px;
+    }
+    & h3{
+        margin-top: 40px;
+        font-size: 25px;
+        font-size: bold;
+    }
+}

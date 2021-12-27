@@ -18,13 +18,13 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="blog-post"
+        className="blog-post container"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          <h1 className="blog-post__title" itemProp="headline">{post.frontmatter.title}</h1>
         </header>
         {tags.length &&
           <div style={{ fontWeight: 'bold' }}>
@@ -39,13 +39,14 @@ const BlogPostTemplate = ({ data, location }) => {
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          className="blog-post__articleBody"
         />
         <hr />
         <footer>
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className="blog-post-nav container">
         <ul
           style={{
             display: `flex`,
