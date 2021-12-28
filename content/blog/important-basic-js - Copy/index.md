@@ -1,25 +1,31 @@
 ---
-title: The important JS parts I need to understand before starting(WIP)
+title: TABLE OF CONTENTS(WIP)
 date: "2021-11-25T22:40:32.169Z"
 description: Revisit parts that you don't understand.
 tags: ["Gatsby", "JavaScript", "GraphQL"]
 ---
+
+
+
+```toc
+# This code block gets replaced with the TOC
+```
 Learning or even worse RE-learning on public is kind of shameful. But I earn my development money through a whole different stack and totally different direction. That said, after just a quick look at JS documentation I found that parts that I'm not sure I totally understood and it's a must to know about.
 
 Hope the list stays low. - That's for sure an article in progress.
 
-### Part 1. - Variables
+## Part 1. - Variables
 
 Understand the difference between let/const/var using ES6.
 
-### Part 2. - Functions
+## Part 2. - Functions
 
 .forEach
 .map
 
 How they work under the hood and the difference between them.
 
-### Part 3. Classes / Export
+## Part 3. Classes / Export
 
 export default class
 class syntax using ES6

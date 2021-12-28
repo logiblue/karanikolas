@@ -4,11 +4,14 @@ import TagDecorator from "../components/tagDeco"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ToC from "../components/toc";
+
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const tags = data.markdownRemark
+  tags.toString();
   const { previous, next } = data
 
   return (
@@ -22,6 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
+
         <header>
           <p>{post.frontmatter.date}</p>
           <h1 className="blog-post__title" itemProp="headline">{post.frontmatter.title}</h1>
@@ -41,6 +45,8 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
           className="blog-post__articleBody"
         />
+
+
         <hr />
         <footer>
           <Bio />
@@ -106,6 +112,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        tags
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -114,6 +121,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        tags
       }
     }
   }

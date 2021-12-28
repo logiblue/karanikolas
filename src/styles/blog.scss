@@ -47,3 +47,25 @@
         font-size: bold;
     }
 }
+
+
+    .table-of-contents {
+        position: fixed;
+        right: 16%;
+        background: #ececec;
+        padding: 30px;
+        font-family: sans-serif;
+        color: #000;
+
+        & ul{
+   
+                list-style: square;
+                color: #426a31;
+            li{
+                & ul li{
+                    font-size: 12px;
+                }
+                font-size:12px ;
+            }
+        }
+    }
