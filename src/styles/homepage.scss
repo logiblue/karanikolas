@@ -18,18 +18,24 @@
         line-height: 60px;
         color:$color-text;
         text-transform: uppercase;
+        font-family: $sg;
     }
     &__heading-secondary{
         font-size: 18px;
         font-weight: 300;
+        font-family: $sg;
         color: $color-text;
-        line-height: 30px;
+        line-height: 20px;
         max-width: 500px;
     }
     &__heading--bold{
         font-size: 180px;
         line-height: 170px;
         margin-bottom: 0px;
+        font-family: $ys;
+        letter-spacing: 3px;
+        font-weight: 400;
+
         &-dot{
             font-size: 180px !important;
             line-height: 0;

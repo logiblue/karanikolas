@@ -1,9 +1,15 @@
 ---
-title: It beggins
+title: It begginssssssss
 date: "2021-11-25T22:40:32.169Z"
 description: Konstantinos Karanikolas - It beggins.
 tags: ["Gatsby", "JavaScript", "GraphQL"]
 ---
+
+
+```toc
+# This code block gets replaced with the TOC
+```
+
 And we are ON.
 
 After a couple years of full-time procastination session I'm trying the method of quick-release. In my professional world I discovered that working in batches of 10-30mins keeps me fresh and focused. Now, I'll finaly to give it a shot to improve my Knowledge on building Immersive UI's through writing about the journey of learning how to create that fancy websites.
@@ -16,11 +22,11 @@ The first website we choose was jeep.com! What an experience. I loved the red wr
 
 ThnX.
 
-<!-- - This however showed weasel
+- This however showed weasel
 - Well uncritical so misled
   - this is very interesting
-- Goodness much until that fluid owl -->
-<!-- 
+- Goodness much until that fluid owl
+
 When she reached the first hills of the **Italic Mountains**, she had a last
 view back on the skyline of her hometown _Bookmarksgrove_, the headline of
 [Alphabet Village](http://google.com) and the subline of her own road, the Line
@@ -105,4 +111,4 @@ would be the word "and" and the Little Blind Text should turn around and return
 to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again. -->
+for their projects again and again.

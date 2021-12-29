@@ -31,11 +31,11 @@ Promises
 
 Last Update - 25/11/2021
 
-<!-- - This however showed weasel
+- This however showed weasel
 - Well uncritical so misled
   - this is very interesting
-- Goodness much until that fluid owl -->
-<!-- 
+- Goodness much until that fluid owl
+
 When she reached the first hills of the **Italic Mountains**, she had a last
 view back on the skyline of her hometown _Bookmarksgrove_, the headline of
 [Alphabet Village](http://google.com) and the subline of her own road, the Line
@@ -120,4 +120,4 @@ would be the word "and" and the Little Blind Text should turn around and return
 to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again. -->
+for their projects again and again.
