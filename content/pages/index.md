@@ -3,6 +3,6 @@ template: 'index-template'
 title: 'Gatsby Starter Glass'
 ---
 
-#Hello World
+#Hello, I'm Konstantinos.
 
-A minimal & beautiful gatsby personal blog starter with nice glassmorphism UI.
+I'm a frontend developer from Greece. This is my blog where I document my learnings and experiences worth sharing.
