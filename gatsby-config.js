@@ -1,57 +1,73 @@
 module.exports = {
   siteMetadata: {
-    title: `Karanikolas Konstantinos`,
+    title: `Gatsby Glass`,
     author: {
-      name: `Karanikolas Konstantinos`,
-      summary: `who lives and works in Greece building websites.`,
+      name: `Yinka Adedire`,
+      summary: `Self-taught front-end web dev. JAMStack.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://karanikolas.work`,
+    openGraphImage: `open-graph-image.png`,
+    description: `A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.`,
+    siteUrl: `https://gatsbyglass.netlify.app`,
     social: {
-      twitter: `karanikolaskons`,
+      twitter: `yinkakun`,
     },
+    socialLinks: [
+      {
+        name: 'github',
+        url: 'https://github.com',
+      },
+      {
+        name: 'twitter',
+        url: 'https://twitter.com',
+      },
+      {
+        name: 'instagram',
+        url: 'https://instagram.com',
+      },
+    ],
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-smoothscroll`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: `media`,
+        path: `${__dirname}/static/media`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: 'pages',
+        path: `${__dirname}/content/pages`,
       },
     },
-
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              staticFolderName: 'static',
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
             },
           },
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: "Table of Contents",
-              tight: false,
-              ordered: false,
-              fromHeading: 2,
-              toHeading: 2,
-              className: "table-of-contents"
-            },
-          },
-          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -65,52 +81,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-flexsearch',
+      resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        languages: ['en'],
-        type: 'MarkdownRemark',
-        fields: [
-          {
-            name: 'title',
-            indexed: true,
-            resolver: 'frontmatter.title',
-            attributes: {
-              encode: 'balance',
-              tokenize: 'strict',
-              threshold: 6,
-              depth: 3,
-            },
-            store: true,
-          },
-          {
-            name: 'description',
-            indexed: true,
-            resolver: 'frontmatter.description',
-            attributes: {
-              encode: 'balance',
-              tokenize: 'strict',
-              threshold: 6,
-              depth: 3,
-            },
-            store: false,
-          },
-          {
-            name: 'url',
-            indexed: false,
-            resolver: 'fields.slug',
-            store: true,
-          },
-        ],
+        modulePath: `${__dirname}/src/netlify-cms/index.js`,
+        enableIdentityWidget: true,
+        publicPath: 'admin',
+        htmlTitle: 'Content Manager',
+        includeRobots: false,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -129,15 +108,15 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                  custom_elements: [{ 'content:encoded': node.html }],
+                });
+              });
             },
             query: `
               {
@@ -158,29 +137,30 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            output: '/rss.xml',
           },
         ],
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Source Sans Pro`, `Poppins\:400,400i,700`],
+        display: 'swap',
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Gatsby Frosted Blog`,
+        short_name: `Gatsby Frosted`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
-}
+};
