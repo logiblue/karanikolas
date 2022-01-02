@@ -42,12 +42,22 @@ const Layout = ({ location, title, children }) => {
 
       </header>
       <main className="global-wrapper">{children}</main>
-      <footer className="container">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
-    </div>
+      <footer className="container foooter">
+        <div className="footer__about">
+          <p className="footer__about-text">Find me on</p>
+          <div className="footer__about-links">
+            <a className="footer__about-links-single" href="https://twitter.com/karanikolasKons">Twitter.com</a>
+            <a className="footer__about-links-single" href="https://github.com/logiblue">Github.com</a>
+          </div>
+
+        </div>
+        <div className="footer__build">
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </div>
+      </footer >
+    </div >
   )
 }
 
