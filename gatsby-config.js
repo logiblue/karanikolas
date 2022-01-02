@@ -2,27 +2,27 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Glass`,
     author: {
-      name: `Yinka Adedire`,
-      summary: `Self-taught front-end web dev. JAMStack.`,
+      name: `Konstantinos Karanikolas`,
+      summary: `Frontend developer from Greece.`,
     },
     openGraphImage: `open-graph-image.png`,
-    description: `A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.`,
+    description: `My name is Konstantinos and I'm a frontend developer from Greece.`,
     siteUrl: `https://gatsbyglass.netlify.app`,
     social: {
-      twitter: `yinkakun`,
+      twitter: `karanikolasKons`,
     },
     socialLinks: [
       {
         name: 'github',
-        url: 'https://github.com',
+        url: 'https://github.com/logiblue',
       },
       {
         name: 'twitter',
-        url: 'https://twitter.com',
+        url: 'https://twitter.com/karanikolasKons',
       },
       {
         name: 'instagram',
-        url: 'https://instagram.com',
+        url: 'https://instagram.com/konstantinos.krn',
       },
     ],
   },

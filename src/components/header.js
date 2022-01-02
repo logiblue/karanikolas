@@ -21,21 +21,21 @@ const Header = () => {
     <StyledHeader>
       <HeaderWrapper>
         <HeaderTitle>
-          <Link to="/">{site.siteMetadata.title}</Link>
+          <Link to="/">Karanikolas Konstantinos</Link>
         </HeaderTitle>
 
         <HeaderNavList>
           <HeaderNavListItem>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog">All Articles</Link>
           </HeaderNavListItem>
 
           <HeaderNavListItem>
-            <Link to="/about">About</Link>
+            <Link to="/about">About Me</Link>
           </HeaderNavListItem>
 
-          <HeaderNavListItem>
+          {/* <HeaderNavListItem>
             <Link to="/contact">Contact</Link>
-          </HeaderNavListItem>
+          </HeaderNavListItem> */}
         </HeaderNavList>
       </HeaderWrapper>
     </StyledHeader>
