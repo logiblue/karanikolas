@@ -78,12 +78,14 @@ const StyledPostListItem = styled.li`
   flex-direction: column;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(10, 90, 100, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 8px;
+  transition:all .2s;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(11, 90, 110, 0.3);
+    transition:all .4s;
   }
 
   @media screen and (max-width: 500px) {
