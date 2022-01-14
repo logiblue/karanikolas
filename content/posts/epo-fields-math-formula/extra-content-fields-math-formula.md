@@ -6,7 +6,7 @@ social_image: '/media/extra-content-option-feat.jpg'
 description: How to use a simple math formula with Extra product options Plugin in woocomerce.
 ---
 
-![epo-plugin](/media/extra-content-option-feat.jpg)
+![epo-plugin](./group-2.png)
 
 
 
@@ -24,7 +24,6 @@ Creating fields with the epo is easy. The plugin provides an extra tab at the pr
 Every field has a different advantage but in our case we're gonna use a "dropdown" and a "Radio button".
 
 
-![epo-plugin-inside](./epo-math-formula.png)
 
 ## Creating a simple Math Formula
 In my scenario the user must select the number of passenger for a trip. For every passenger we should add some extra costs on the initial price. 
@@ -50,6 +49,11 @@ Second Add a radio button. On the price of the Radio we choose to add a Math For
 ```
 
 
+##
+
+
+![epo-plugin-inside](./epo-math-formula.png)
+A screenshot of the math-formula
 ## Ease of use
 As quick as possible. While training our customer on how to add his fields I choose to create some starters and let him just copy-paste or even import export csv's with the fields. My timer wrote around 2.5 hours of training including the extra emails-phone calls. So I think this plugin with the right approach could be easy to use even for your clients.
 
