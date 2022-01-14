@@ -69,6 +69,18 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              ordered: false,
+              fromHeading: 2,
+              toHeading: 3,
+              className: "table-of-contents"
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+          {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
