@@ -5,6 +5,11 @@ tags: [Woocommerce, WordPress]
 social_image: '/media/extra-content-option-feat.jpg'
 description: How to use a simple math formula with Extra product options Plugin in woocomerce.
 ---
+
+![epo-plugin](/media/extra-content-option-feat.jpg)
+
+
+
 ```toc
 # This code block gets replaced with the TOC
 ```
@@ -18,7 +23,10 @@ Creating fields with the epo is easy. The plugin provides an extra tab at the pr
 
 Every field has a different advantage but in our case we're gonna use a "dropdown" and a "Radio button".
 
-## Creating Math Formula
+
+![epo-plugin-inside](./epo-math-formula.png)
+
+## Creating a simple Math Formula
 In my scenario the user must select the number of passenger for a trip. For every passenger we should add some extra costs on the initial price. 
 
 Let's break down the costs: 
