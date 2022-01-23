@@ -1,6 +1,6 @@
 ---
 title: Math Formula -  Extra product options[Woocommerce]
-date: 2021-01-02
+date: 2021-01-14
 tags: [Woocommerce, WordPress]
 social_image: '/media/extra-content-option-feat.jpg'
 description: How to use a simple math formula with Extra product options Plugin in woocomerce.
@@ -35,7 +35,6 @@ Let's break down the costs:
 
 So at the end without choosing any other of our options the Total Cost for each passenger on our trip should be  - 1150$
 
-But we need all this costs to be calculated by choosing the passengers number.
 
 ## Steps
 First we need to create a dropdown field. Add there 1-5 options and the prices.

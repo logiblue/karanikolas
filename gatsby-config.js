@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Glass`,
+    title: `Konstantinos Karanikolas`,
     author: {
       name: `Konstantinos Karanikolas`,
       summary: `Frontend developer from Greece.`,
     },
     openGraphImage: `open-graph-image.png`,
     description: `My name is Konstantinos and I'm a frontend developer from Greece.`,
-    siteUrl: `https://gatsbyglass.netlify.app`,
+    siteUrl: `https://karanikolas.work`,
     social: {
       twitter: `karanikolasKons`,
     },
@@ -50,6 +50,12 @@ module.exports = {
       options: {
         name: 'posts',
         path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mixpanel',
+      options: {
+        apiToken: '0eef55bd7ccfb3d5d29cb7d0f7f1a7ad', // required
       },
     },
     {

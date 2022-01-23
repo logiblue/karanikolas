@@ -16,10 +16,32 @@ const Tags = ({ data }) => {
     <Layout title="All Tags">
       <h1>All Tags</h1>
 
-      <ul>
+      <ul
+        css={
+          `
+          padding:0;
+          `
+        }>
         {tags.map((tag) => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${toKebabCase(tag.fieldValue)}/`}>
+          <li key={tag.fieldValue} className='all-tags-single'
+
+            css={`
+            list-style:none;
+            padding-left:0;
+            `}
+
+          >
+            <Link
+              css={`
+              display:block;
+              color:#000;
+              font-family:Poppins;
+              font-size:20px;
+              font-weight:500;
+              margin-bottom:30px;
+            `}
+
+              to={`/tags/${toKebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           </li>

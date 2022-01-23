@@ -27,6 +27,7 @@ const HomePage = ({ data }) => {
           margin-left: auto;
           margin-right: auto;
           width: fit-content;
+          background-color:#f4f4f4;
         `}
         to="/blog"
       >

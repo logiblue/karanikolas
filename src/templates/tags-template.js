@@ -23,6 +23,7 @@ const TagsTemplate = ({ pageContext, data }) => {
             display: inline-block;
             color: inherit;
             text-transform: uppercase;
+            background-color:#f4f4f4;
           `}
           to="/tags"
         >
@@ -34,6 +35,7 @@ const TagsTemplate = ({ pageContext, data }) => {
           css={`
             margin-top: var(--size-400);
             display: inline-block;
+            background-color:#f4f4f4;
           `}
           to="/tags"
         >
